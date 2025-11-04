@@ -20,3 +20,7 @@ https://traversymedia.com
 ## Tailwind responsive classes and state classes
 
 Tailwind has conditional class naming for breakpoints as well as states such as hover, focus, etc.
+
+## Spacing
+
+On chapter 3 there's a list of tailwind classes and their correspondent spacings
