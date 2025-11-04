@@ -6,25 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Typography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      //Setting up custom font families
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["ui-sans-serif", "system-ui"],
+            serif: ["Tapestry", "Georgia"],
+            mono: ["ui-monospace, SFMono-Regular"],
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <!-- Font Family -->
-
+    <div class="font-sans">Tailwind is font-sans awesome</div>
+    <div class="font-serif">Tailwind is font-serif awesome</div>
+    <div class="font-mono">Tailwind is font-mono awesome</div>
     <!-- Font Size -->
-
+    <div class="text-xs">Tailwind is extra small</div>
+    <div class="text-sm">Tailwind is small</div>
+    <div class="text-base">Tailwind is base</div>
+    <div class="text-lg">Tailwind is large</div>
+    <div class="text-xl">Tailwind is extra large</div>
+    <div class="text-2xl">Tailwind is 2x extra large</div>
+    <div class="text-3xl">Tailwind is 3x extra large</div>
+    <!-- ... up to 9 ... -->
     <!-- Font Weight -->
-
+    <div class="font-light">Tailwind is light</div>
+    <div class="font-normal">Tailwind is normal</div>
+    <div class="font-medium">Tailwind is medium</div>
+    <div class="font-semibold">Tailwind is semibold</div>
+    <div class="font-bold">Tailwind is bold</div>
     <!-- Letter Spacing -->
-
+    <div class="tracking-tighter">Tailwind is tighter</div>
+    <div class="tracking-tight">Tailwind is tight</div>
+    <div class="tracking-normal">Tailwind is normal</div>
+    <div class="tracking-wide">Tailwind is wide</div>
+    <div class="tracking-wider">Tailwind is wider</div>
     <!-- Text Alignment -->
-
+    <div class="text-left">Tailwind is aligned left</div>
+    <div class="text-center">Tailwind is aligned center</div>
+    <div class="text-right">Tailwind is aligned right</div>
     <!-- Text Decoration -->
-
+    <div class="underline decoration-4 decoration-blue-300">
+      Tailwind is underlined thick
+    </div>
+    <div class="line-through decoration-2">Tailwind is line-through</div>
     <!-- Decoration Style -->
-
+    <div class="underline decoration-double decoration-blue-300">
+      Tailwind is underlined double line
+    </div>
+    <div class="underline decoration-dashed decoration-blue-300">
+      Tailwind is underlined dashed line
+    </div>
+    <div class="underline decoration-wavy decoration-blue-300">
+      Tailwind is underlined wavy line
+    </div>
     <!-- Decoration Offset -->
-
+    <div class="underline decoration-4 decoration-blue-300 underline-offset-8">
+      Tailwind is underlined with offset
+    </div>
     <!-- Text Transform -->
+    <p class="normal-case">Tailwind is normal</p>
+    <p class="uppercase">Tailwind is uppercase</p>
+    <p class="lowercase">TAILWIND IS LOWERCASE</p>
+    <p class="capitalize">tailwind is capitalize</p>
   </body>
 </html>
 
