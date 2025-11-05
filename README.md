@@ -56,3 +56,13 @@ tailwind.config = {
 ```
 
 An example of this and other typography related classes are present in chapter 4.
+
+# Interactivity
+
+## Remove browser specific styling on an element
+
+In some browsers, and sometimes based on the operating system, there are elements that the default styling changes. To remove the browser specific styling on an element use the tailwind class `appearance-none`. Check the example in chapter 10.
+
+## Smooth scroll
+
+Tailwind offers a class that allows you to set up the
