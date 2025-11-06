@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<script>
+				tailwind = { 
+					config: { 
+						darkMode: 'class' 
+					} 
+				};
+			</script>
+			<script src="https://cdn.tailwindcss.com"></script>
+		<title>Dark Mode</title>
+	</head>
+  <body>
+		<!-- By default, you can have your project use whatever mode your OS is using. You can use "dark:{class}". You can also set your config to use a class instead of using your OS mode -->
+		<div class="container mx-auto mt-10 bg-white dark:bg-slate-900 rounded-xl px-6 py-8 shadow-xl">
+			<h3 class="text-slate-900 dark:text-white font-medium tracking-tight">Lorem ipsum dolor sit.</h3>
+			<p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex dolore, animi, est nobis molestiae atque dolores maiores perferendis officia illo consequatur aspernatur necessitatibus assumenda laborum rerum maxime quae cum autem, sunt aperiam voluptates. A quia eaque reprehenderit odit earum aut adipisci ex, dignissimos quasi dolor voluptatum ducimus. Qui, minus?</p>
+		</div>
+		<div class="flex gap-4 ml-6 mt-6">
+			<button id="lightMode" class="px-3 py-1 rounded bg-gray-200 text-gray-800">Light</button>
+			<button id="darkMode" class="px-3 py-1 rounded bg-gray-800 text-white">Dark</button>
+			<button id="autoMode" class="px-3 py-1 rounded bg-blue-200 text-blue-900">Auto</button>
+		</div>
+			<script>
+				// Apply theme based on preference
+				function applyTheme() {
+					const theme = localStorage.getItem('theme');
+					if (theme === 'dark') {
+						  document.documentElement.classList.add('dark');
+					} else if (theme === 'light') {
+						  document.documentElement.classList.remove('dark');
+					} else {
+						// Auto: use system preference
+						if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+							document.documentElement.classList.add('dark');
+						} else {
+							document.documentElement.classList.remove('dark');
+						}
+					}
+				}
+
+				// Listen for system preference changes in auto mode
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+					if (!localStorage.getItem('theme')) {
+						applyTheme();
+					}
+				});
+
+				// Button listeners
+				document.getElementById('lightMode').onclick = function() {
+					localStorage.setItem('theme', 'light');
+					applyTheme();
+				};
+				document.getElementById('darkMode').onclick = function() {
+					localStorage.setItem('theme', 'dark');
+					applyTheme();
+				};
+				document.getElementById('autoMode').onclick = function() {
+					localStorage.removeItem('theme');
+					applyTheme();
+				};
+
+				// On load
+				applyTheme();
+			</script>
+  </body>
+</html>
+
