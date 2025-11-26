@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h3 {
+        @apply text-darkGrayishBlue mb-8 text-4xl font-bold md:text-5xl;
+    }
+}
+
+.section-container {
+    @apply mx-auto mb-40 max-w-6xl text-center;
+}
+
+.button-container {
+    @apply flex w-full flex-col justify-center space-y-6 text-xl text-white md:flex-row md:space-x-4 md:space-y-0;
+}
+
 body {
     background-image: url(../dist/images/bg-header-desktop.png);
     background-repeat: no-repeat;
