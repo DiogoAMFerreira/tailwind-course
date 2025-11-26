@@ -16,7 +16,7 @@
 }
 
 .section-paragraph {
-    @apply text-grayishBlue mx-auto max-w-3xl text-xl leading-9;
+    @apply text-grayishBlue mx-auto max-w-3xl leading-9;
 }
 
 .button-container {
@@ -33,4 +33,9 @@ body {
     body {
         background-image: url(../dist/images/bg-header-mobile.png);
     }
+}
+
+.ficon:hover {
+    filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+        brightness(101%) contrast(94%);
 }
