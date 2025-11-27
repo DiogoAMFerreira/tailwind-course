@@ -7,3 +7,11 @@ for (let i = 0; i < hamIcons.length; i++) {
         hamIcons[i].classList.toggle('active');
     });
 }
+
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('flex');
+    menu.classList.toggle('hidden');
+});
