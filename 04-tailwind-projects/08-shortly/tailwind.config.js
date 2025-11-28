@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./dist/*.{html,js}'],
+    content: ['./dist/*.{html,js}', './src/*.{html,js}'],
     theme: {
         extend: {
             colors: {
@@ -10,7 +10,6 @@ module.exports = {
                 grayishViolet: 'hsl(257, 7%, 63%)',
                 veryDarkBlue: 'hsl(255, 11%, 22%)',
                 veryDarkViolet: 'hsl(260, 8%, 14%)',
-                red: 'hsl(0, 87%, 67%)',
             },
             fontFamily: {
                 sans: ['Poppins', 'sans-serif'],
