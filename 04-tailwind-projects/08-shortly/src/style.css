@@ -12,3 +12,25 @@
     filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
         brightness(89%) contrast(85%);
 }
+
+.hamburger-icon .line {
+    transition:
+        transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+        opacity 0.2s;
+    transform-origin: 20px 20px;
+}
+.hamburger-icon .top {
+    transform: translateY(-8px);
+}
+.hamburger-icon .bottom {
+    transform: translateY(8px);
+}
+.hamburger-icon.active .top {
+    transform: rotate(45deg);
+}
+.hamburger-icon.active .middle {
+    opacity: 0;
+}
+.hamburger-icon.active .bottom {
+    transform: rotate(-45deg);
+}

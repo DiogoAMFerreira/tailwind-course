@@ -56,9 +56,71 @@
                         >Sign up</a
                     >
                 </div>
-                <!-- @TODO Hamburger Menu -->
+                <!-- Hamburger Button -->
+                <div class="lg:hidden">
+                    <button
+                        id="menu-btn"
+                        type="button"
+                        class="text-grayishViolet relative z-40 block h-8 w-8 cursor-pointer focus:outline-none lg:hidden"
+                    >
+                        <svg
+                            class="hamburger-icon"
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            style="cursor: pointer"
+                            fill="currentColor"
+                        >
+                            <rect
+                                class="line top"
+                                x="8"
+                                y="18"
+                                width="24"
+                                height="4"
+                                rx="2"
+                            />
+                            <rect
+                                class="line middle"
+                                x="8"
+                                y="18"
+                                width="24"
+                                height="4"
+                                rx="2"
+                            />
+                            <rect
+                                class="line bottom"
+                                x="8"
+                                y="18"
+                                width="24"
+                                height="4"
+                                rx="2"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <!-- @TODO Mobile Menu -->
+            <div
+                id="menu"
+                class="bg-darkViolet z-100 absolute left-6 right-6 top-20 hidden rounded-lg p-6"
+            >
+                <div
+                    class="flex w-full flex-col items-center justify-center space-y-6 rounded-sm font-bold text-white"
+                >
+                    <a href="#" class="w-full text-center">Features</a>
+                    <a href="#" class="w-full text-center">Pricing</a>
+                    <a href="#" class="w-full text-center">Resources</a>
+                    <a
+                        href="#"
+                        class="w-full border-t border-gray-400 pt-6 text-center"
+                        >Login</a
+                    >
+                    <a
+                        href="#"
+                        class="bg-cyan w-full rounded-full py-3 text-center"
+                        >Sign Up</a
+                    >
+                </div>
+            </div>
         </nav>
         <!-- Hero Section -->
         <section id="hero">
