@@ -12,8 +12,42 @@
         />
         <title>Bookmark</title>
     </head>
-    <body>
-        <h1 class="text-5xl">Hello World</h1>
+    <body class="overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <nav class="container relative mx-auto p-6">
+            <!-- Flex container -->
+            <div class="my-6 flex items-center justify-between space-x-20">
+                <!-- Logo -->
+                <div class="z-30">
+                    <img src="images/logo-bookmark.svg" alt="" id="logo" />
+                </div>
+                <!-- Menu items -->
+                <div
+                    class="text-grayish-blue hidden items-center space-x-10 uppercase md:flex"
+                >
+                    <a
+                        href="#features"
+                        class="hover:text-soft-red cursor-pointer tracking-widest"
+                        >Features</a
+                    >
+                    <a
+                        href="#download"
+                        class="hover:text-soft-red cursor-pointer tracking-widest"
+                        >Download</a
+                    >
+                    <a
+                        href="#faq"
+                        class="hover:text-soft-red cursor-pointer tracking-widest"
+                        >FAQ</a
+                    >
+                    <a
+                        href=""
+                        class="bg-soft-red border-soft-red hover:text-soft-red rounded-lg border-2 px-8 py-2 text-white shadow-md duration-200 hover:bg-white"
+                        >Login</a
+                    >
+                </div>
+            </div>
+        </nav>
     </body>
 </html>
 <script src="bundle.js"></script>
